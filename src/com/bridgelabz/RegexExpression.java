@@ -20,19 +20,19 @@ public class RegexExpression {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("welcome to Regex");
-			String pattern = "^[A-Z]{1}[A-Za-z]{2,}$";
+			String pattern = "^[a-zA-Z]+([_+-.][a-zA-Z])*[@][a-zA-Z]+[.][a-z]{2,3}([.][a-zA-Z]{2})*$";
 
 			Scanner scanner = new Scanner(System.in);
-			System.out.print("Please Enter Last name:");
+			System.out.print("Please Enter email:");
 
-			String lastName = scanner.next();
+			String email = scanner.next();
 
-			boolean isValid = validate(pattern, lastName);
+			boolean isValid = validate(pattern, email);
 
 			if (isValid) {
-				System.out.println("This is valid last name .");
+				System.out.println("This is valid email .");
 			} else {
-				System.out.println("Not a valid name");
+				System.out.println("Not a valid email");
 			}
 		}
 
