@@ -22,7 +22,8 @@ public class RegexExpression {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("welcome to Regex");
-			String pattern ="^[a-zA-Z0-9]{8,}$";
+			String pattern ="^[A-Z]{1}[a-zA-Z0-9]{8,}$";
+
 
 			Scanner scanner = new Scanner(System.in);
 			System.out.print("Please Enter password:");
