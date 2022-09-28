@@ -22,21 +22,20 @@ public class RegexExpression {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("welcome to Regex");
-			String pattern ="^[A-Z]{1}[a-zA-Z0-9]{1,}[!@#$%^&]{1,}[a-zA-Z0-9]{1,}$";
+		String pattern = "^[a-zA-Z0-9]+[@][a-zA-Z]+[.][a-z]{2,3}$";
 
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Please Enter value:=");
 
-			Scanner scanner = new Scanner(System.in);
-			System.out.print("Please Enter password:");
+		String lastName = scanner.next();
 
-			String  password= scanner.next();
+		boolean isValid = validate(pattern, lastName);
 
-			boolean isValid = validate(pattern, password);
-
-			if (isValid) {
-				System.out.println("This is valid password .");
-			} else {
-				System.out.println("Not a valid password");
-			}
+		if (isValid) {
+			System.out.println("This is valid Email ID .");
+		} else {
+			System.out.println("Not a valid ID");
 		}
-
 	}
+
+}
