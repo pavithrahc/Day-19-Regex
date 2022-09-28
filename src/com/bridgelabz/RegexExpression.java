@@ -14,25 +14,25 @@ public class RegexExpression {
 	/**
 	 * @param args
 	 */
-	static boolean validate(String pattern, String text) {
-		return Pattern.compile(pattern).matcher(text).matches();
+	static boolean validate(String pattern, CharSequence num) {
+		return Pattern.compile(pattern).matcher(num).matches();
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("welcome to Regex");
-			String pattern = "^[a-zA-Z]+([_+-.][a-zA-Z])*[@][a-zA-Z]+[.][a-z]{2,3}([.][a-zA-Z]{2})*$";
+			String pattern ="^(91)[-.+]{1}[1-9]{1}[0-9]{9}$";
 
 			Scanner scanner = new Scanner(System.in);
-			System.out.print("Please Enter email:");
+			System.out.print("Please Enter mobile number:");
 
-			String email = scanner.next();
+			CharSequence num = scanner.next();
 
-			boolean isValid = validate(pattern, email);
+			boolean isValid = validate(pattern, num);
 
 			if (isValid) {
-				System.out.println("This is valid email .");
+				System.out.println("This is valid number .");
 			} else {
-				System.out.println("Not a valid email");
+				System.out.println("Not a valid number");
 			}
 		}
 
